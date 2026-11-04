@@ -71,7 +71,6 @@ allow-direct-references = true
 exclude-newer = "7 days"
 
 [tool.uv.exclude-newer-package]
-certifi = false
 pip = false
 uv = false
 
