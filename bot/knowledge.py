@@ -123,6 +123,14 @@ PYTHON_PACKAGES: dict[str, dict[str, str]] = {
         'changelog_name': 'releases',
         'changelog_url': 'https://github.com/eliben/pycparser/releases',
     },
+    'pycryptodomex': {
+        'owner': 'Legrandin',
+        'repo': 'pycryptodome',
+        'tag_prefix': 'v',
+        'tag_suffix': 'x',
+        'changelog_name': 'changelog',
+        'changelog_url': 'https://www.pycryptodome.org/src/changelog',
+    },
     'pyinstaller[win_amd64]': {
         'owner': 'pyinstaller',
         'repo': 'pyinstaller',
