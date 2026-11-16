@@ -555,8 +555,9 @@ class PythonDependenciesUpdater(DependenciesUpdater):
             compare = ''
             if github_info and old and new:
                 tag_prefix = github_info.get('tag_prefix') or 'v'
-                old_tag_matches = denormalized_tags(old, tag_prefix)
-                new_tag_matches = denormalized_tags(new, tag_prefix)
+                tag_suffix = github_info.get('tag_suffix') or ''
+                old_tag_matches = denormalized_tags(f'{old}{tag_suffix}', tag_prefix)
+                new_tag_matches = denormalized_tags(f'{new}{tag_suffix}', tag_prefix)
 
                 tags_list = self.gh.paginated_results(
                     self.gh.list_repository_tags,
